@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile Active File",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "mkdir -p ${workspaceFolder}/build/Debug/outDebug && gcc ${file} -o ${workspaceFolder}/build/Debug/outDebug/${fileBasenameNoExtension} -g"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "Компиляция текущего C-файла с автоматическим созданием Debug"
+    }
+  ]
+}
